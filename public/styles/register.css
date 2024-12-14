@@ -1,0 +1,108 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(23, 37, 37);
+}
+h1{
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 60px;
+    color:rgb(241, 223, 140);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+    background-color: rgb(23, 37, 37);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Permanent Marker", serif;
+    position: relative;
+    color: rgb(141, 121, 4);
+    border-radius: 5px;
+}
+form::after,form::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),transparent 90%, rgb(141, 121, 4));
+    z-index: -1;
+    border-radius: 5px;
+    padding: 5px;
+    animation: spin 4s linear infinite;
+}
+form::before{
+    filter: blur(1.5rem);
+    opacity: 0.7;
+}
+
+.submit{
+    width:fit-content;
+    align-self: center;
+    background: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: "Permanent Marker", serif;
+    color: rgb(141, 121, 4);
+}
+.email-label{
+    margin-right: 75px;
+    font-size: 30px;
+}
+.password-label{
+    font-size: 30px;
+    margin-right: 30px;
+}
+svg{
+    width: 35px;
+    height: auto;
+}
+.input-email, .input-password{
+    height: 25px;
+    width: 220px;
+    border: none;
+    background-color: rgb(141, 121, 4);
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+}
+span{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 20px;
+    color:rgb(241, 223, 140);
+}
+
+a{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: "Permanent Marker", serif;
+    color: transparent;
+    background-image: linear-gradient(to right,red,yellow,green,blue);
+    -webkit-background-clip: text;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes spin{
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}

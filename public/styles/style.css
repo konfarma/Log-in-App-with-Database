@@ -1,0 +1,47 @@
+body{
+    background-image: url(../images/shhh.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 100vh;
+    background-color: rgb(23, 37, 37);
+    background-blend-mode: multiply;
+    position: relative;
+}
+.login{
+    text-decoration: none;
+    font-size: 5em;
+    font-weight: bold;
+    font-family: "Permanent Marker", serif;
+    color: #FFC857;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+}
+.register{
+    text-decoration: none;
+    font-size: 5em;
+    font-weight: bold;
+    font-family: "Permanent Marker", serif;
+    color: #FFC857;;
+    position: absolute;
+    bottom: 5%;
+    right: 0; 
+}
+.login::after,.register::after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 0; /* Initially hidden */
+    bottom: 5%; /* Position the underline below the text */
+    left: 5%;
+    background-color: #fab938;; 
+    filter: blur(5px); 
+    transition: width 0.5s ease;
+}
+.login:hover::after,.register:hover::after{
+    width: 95%;
+}
+
+
+
